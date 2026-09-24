@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><title>GUDNITE — Thắp sáng từng điểm ảnh</title><meta name="description" content="Khám phá đèn ngủ in 3D GUDNITE được chế tác tại Sài Gòn. Chọn mẫu đèn, phối màu đế và mang ánh sáng ấm áp về nhà."><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="site.css"><script src="theme.js"></script><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {"surface-tint":"rgb(var(--surface-tint) / <alpha-value>)","on-tertiary-fixed":"rgb(var(--on-tertiary-fixed) / <alpha-value>)","error":"rgb(var(--error) / <alpha-value>)","tertiary-fixed":"rgb(var(--tertiary-fixed) / <alpha-value>)","on-primary-container":"rgb(var(--on-primary-container) / <alpha-value>)","tertiary":"rgb(var(--tertiary) / <alpha-value>)","outline":"rgb(var(--outline) / <alpha-value>)","inverse-on-surface":"rgb(var(--inverse-on-surface) / <alpha-value>)","surface-bright":"rgb(var(--surface-bright) / <alpha-value>)","surface-container-high":"rgb(var(--surface-container-high) / <alpha-value>)","on-tertiary-fixed-variant":"rgb(var(--on-tertiary-fixed-variant) / <alpha-value>)","secondary-container":"rgb(var(--secondary-container) / <alpha-value>)","primary":"rgb(var(--primary) / <alpha-value>)","on-surface":"rgb(var(--on-surface) / <alpha-value>)","tertiary-container":"rgb(var(--tertiary-container) / <alpha-value>)","outline-variant":"rgb(var(--outline-variant) / <alpha-value>)","surface-variant":"rgb(var(--surface-variant) / <alpha-value>)","secondary-fixed":"rgb(var(--secondary-fixed) / <alpha-value>)","surface":"rgb(var(--surface) / <alpha-value>)","secondary-fixed-dim":"rgb(var(--secondary-fixed-dim) / <alpha-value>)","tertiary-fixed-dim":"rgb(var(--tertiary-fixed-dim) / <alpha-value>)","primary-fixed":"rgb(var(--primary-fixed) / <alpha-value>)","on-primary":"rgb(var(--on-primary) / <alpha-value>)","primary-container":"rgb(var(--primary-container) / <alpha-value>)","surface-container-low":"rgb(var(--surface-container-low) / <alpha-value>)","on-secondary-container":"rgb(var(--on-secondary-container) / <alpha-value>)","surface-container":"rgb(var(--surface-container) / <alpha-value>)","secondary":"rgb(var(--secondary) / <alpha-value>)","inverse-primary":"rgb(var(--inverse-primary) / <alpha-value>)","on-secondary":"rgb(var(--on-secondary) / <alpha-value>)","surface-container-highest":"rgb(var(--surface-container-highest) / <alpha-value>)","inverse-surface":"rgb(var(--inverse-surface) / <alpha-value>)","on-primary-fixed-variant":"rgb(var(--on-primary-fixed-variant) / <alpha-value>)","on-error":"rgb(var(--on-error) / <alpha-value>)","surface-container-lowest":"rgb(var(--surface-container-lowest) / <alpha-value>)","on-tertiary":"rgb(var(--on-tertiary) / <alpha-value>)","on-secondary-fixed":"rgb(var(--on-secondary-fixed) / <alpha-value>)","on-surface-variant":"rgb(var(--on-surface-variant) / <alpha-value>)","on-primary-fixed":"rgb(var(--on-primary-fixed) / <alpha-value>)","background":"rgb(var(--background) / <alpha-value>)","on-error-container":"rgb(var(--on-error-container) / <alpha-value>)","error-container":"rgb(var(--error-container) / <alpha-value>)","on-background":"rgb(var(--on-background) / <alpha-value>)","on-tertiary-container":"rgb(var(--on-tertiary-container) / <alpha-value>)","surface-dim":"rgb(var(--surface-dim) / <alpha-value>)","primary-fixed-dim":"rgb(var(--primary-fixed-dim) / <alpha-value>)","on-secondary-fixed-variant":"rgb(var(--on-secondary-fixed-variant) / <alpha-value>)"},
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1.25rem",
+          "margin": "3rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-pixel-sm": [
+            "Space Mono"
+          ],
+          "label-ui": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-pixel-lg": [
+            "Space Mono"
+          ]
+        },
+        "fontSize": {
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-pixel-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.1em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-ui": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-pixel-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      }
+    }
+  }</script><link rel="stylesheet" href="brand.css"></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><a class="brand-logo" href="index.html" aria-label="Gudnite — Trang chủ"><img class="logo-light" src="assets/logo-light.png" alt="Gudnite" width="3508" height="2638"><img class="logo-dark" src="assets/logo-dark.png" alt="" aria-hidden="true" width="3508" height="2638"></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="shop" href="index.html#shop-models">Cửa hàng</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="collections" href="index.html#shop-models">Bộ sưu tập</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="index.html#how-it-works">Về chúng tôi</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="index.html#faq">Hỏi đáp</a></nav><div class="site-controls"><button id="theme-toggle" class="icon-button" aria-label="Chuyển sang giao diện tối" title="Đổi giao diện"><span class="material-symbols-outlined">dark_mode</span></button><button id="menu-toggle" class="icon-button mobile-menu-button" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu"><span class="material-symbols-outlined">menu</span></button></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center bg-surface-container-low rounded-xl px-space-sm py-1.5 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_rgba(107,56,212,0.25)] transition-all"><span class="material-symbols-outlined text-primary text-[18px] mr-space-xs">search</span><input class="bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-sm text-body-sm w-36 lg:w-44" placeholder="Tìm đèn..." type="text"/></div><button aria-label="Sản phẩm yêu thích" class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[20px]">favorite</span></button><a aria-label="Giỏ hàng" class="relative w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cart" href="#cart"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 bg-secondary text-on-secondary rounded-full font-label-pixel-sm text-[10px] flex items-center justify-center leading-none font-bold">2</span></a><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2.5 bg-primary text-on-primary rounded-xl font-headline-sm text-body-sm font-bold shadow-[0_4px_0_#5516be] hover:translate-y-0.5 hover:shadow-[0_2px_0_#5516be] transition-all" data-path="shop" href="index.html#shop-models"><span class="font-label-ui text-label-ui tracking-wide">Mua ngay</span></a></div></div><nav id="mobile-menu" hidden><a href="index.html#shop-models">Cửa hàng & Bộ sưu tập</a><a href="index.html#how-it-works">Về chúng tôi</a><a href="index.html#faq">Hỏi đáp</a><a href="#cart">Giỏ hàng</a></nav></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner -->
+<div class="w-full bg-surface-container py-2 px-margin-mobile lg:px-margin text-center">
+<p class="font-label-pixel-sm text-label-pixel-sm text-primary flex items-center justify-center gap-space-xs tracking-wider">
+
+    </p>
+</div>
+<!-- 1. HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-24">
+<!-- Ambient Radial Glow Layers -->
+<div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 left-1/4 w-80 h-80 bg-secondary-fixed/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Copy Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md z-10">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-sm py-1 bg-surface-container-high rounded-full font-label-pixel-sm text-label-pixel-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+            ÁNH SÁNG ĐIỂM ẢNH THẾ HỆ 2
+          </span>
+
+</div>
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero text-on-surface tracking-tight">
+          Thắp sáng không gian, <br class="hidden sm:inline"/>
+<span class="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary-container">
+            từng điểm ảnh nhỏ.
+          </span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Khám phá đèn ngủ trang trí được tạo hình bằng công nghệ in 3D. Chọn một trong bốn kiểu dáng bậc thang, phối màu đế yêu thích và mang ánh sáng vàng ấm 2700K đến góc nghỉ ngơi của bạn.
+        </p>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-3.5 bg-primary text-on-primary rounded-xl font-headline-sm text-body-md font-bold shadow-[0_4px_0_#5516be] hover:translate-y-0.5 hover:shadow-[0_2px_0_#5516be] transition-all flex items-center gap-space-xs" href="#shop-models">
+<span>Khám phá đèn</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="px-space-lg py-3.5 bg-surface-container-lowest text-on-surface rounded-xl font-label-ui text-label-ui shadow-sm hover:bg-surface-container transition-all flex items-center gap-space-xs" href="#how-it-works">
+<span class="material-symbols-outlined text-primary text-[20px]">view_in_ar</span>
+<span>Quy trình chế tác</span>
+</a>
+</div>
+<!-- Social Proof Stats Ribbon -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-lg max-w-lg">
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-pixel-lg text-label-pixel-lg text-primary block">4,200+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Căn phòng được thắp sáng</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-0.5 text-tertiary font-label-pixel-lg text-label-pixel-lg">
+<span>★ 4.9</span>
+<span class="text-on-surface-variant font-body-sm text-[12px]">/ 5</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hơn 500 đánh giá xác thực</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-pixel-lg text-label-pixel-lg text-secondary block">GIAO MIỄN PHÍ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Giao nhanh toàn quốc</span>
+</div>
+</div>
+</div>
+<!-- Hero Featured Lamp Showcase -->
+<div class="lg:col-span-5 relative flex items-center justify-center">
+<!-- Floating Pill Badges around lamp -->
+<div class="absolute -top-4 -left-4 z-20 px-space-sm py-1.5 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl shadow-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">bolt</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-on-surface">5V USB-C • 2.5W</span>
+</div>
+<div class="absolute -bottom-2 -right-4 z-20 px-space-sm py-1.5 bg-surface-container-lowest/90 backdrop-blur-md rounded-xl shadow-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">compost</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-on-surface">100% PLA sinh học</span>
+</div>
+<!-- 8-Bit Pixel Sparkles -->
+<div class="absolute top-12 right-6 text-tertiary animate-bounce text-xl pointer-events-none">✦</div>
+<div class="absolute bottom-20 left-4 text-primary text-sm pointer-events-none">◆</div>
+<!-- Product Image Stage -->
+<div class="relative w-full max-w-md aspect-square rounded-3xl p-4 bg-gradient-to-b from-surface-container-low to-surface-container-high shadow-xl flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-radial from-tertiary-fixed/30 via-primary-fixed/20 to-transparent pointer-events-none"></div>
+<img alt="Đèn GUDNITE trong không gian trang trí" class="w-full h-full object-contain filter drop-shadow-[0_16px_32px_rgba(107,56,212,0.25)] hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClRHLNnJ4rPDL6dfBb72e602A72bNA4qDhEQVNyj62r2tYK0vL5dZqaTgsJ8a0tP_h49QYVWuW9ckAN-76iClko7Zzt3FsIoREACiuIGz-yJ1TcNUGD72vHAg8U1Fv7qp61Qpx0t8w8J4KWQ2FIW8PtBrz3RXNbbImVQBK9B0KLZrFPH5DcXlCVUPORfMgw9MhiRzzu9-mjxfr71KCOD3n3rrqvkSOFZg8Axiwfgf2qTeoRjr99iH8xA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. FEATURED PRODUCTS SECTION -->
+<section class="w-full py-space-xl bg-surface-container-lowest" id="shop-models">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface">Đèn ngủ in 3D thủ công</h2>
+</div>
+<div class="px-space-sm py-2 bg-surface-container-low rounded-xl font-label-pixel-sm text-label-pixel-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+          Chọn kiểu dáng • Phối màu đế
+        </div>
+</div>
+<!-- 4-Column Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: The Pixel Monolith -->
+<div class="group flex flex-col bg-surface rounded-2xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<span class="absolute top-2 left-2 px-2 py-0.5 bg-primary text-on-primary rounded font-label-pixel-sm text-label-pixel-sm">BÁN CHẠY</span>
+<img alt="Đèn GUDNITE trong không gian trang trí" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClRHLNnJ4rPDL6dfBb72e602A72bNA4qDhEQVNyj62r2tYK0vL5dZqaTgsJ8a0tP_h49QYVWuW9ckAN-76iClko7Zzt3FsIoREACiuIGz-yJ1TcNUGD72vHAg8U1Fv7qp61Qpx0t8w8J4KWQ2FIW8PtBrz3RXNbbImVQBK9B0KLZrFPH5DcXlCVUPORfMgw9MhiRzzu9-mjxfr71KCOD3n3rrqvkSOFZg8Axiwfgf2qTeoRjr99iH8xA"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Đèn Trụ Điểm Ảnh</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary">★ 4.9 (218)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Thân trụ bậc thang mang ánh sáng ấm áp đến đầu giường.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">350.000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block"></span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded-xl font-label-ui text-label-ui transition-colors" href="product.html?model=0">
+              Chọn mẫu
+            </a>
+</div>
+</div>
+<!-- Card 2: Pixel Bloom -->
+<div class="group flex flex-col bg-surface rounded-2xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<span class="absolute top-2 left-2 px-2 py-0.5 bg-secondary text-on-secondary rounded font-label-pixel-sm text-label-pixel-sm">MẪU MỚI</span>
+<img alt="Đèn GUDNITE trong không gian trang trí" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0n9nUayxkF5WCbaHYI1Y-7lQfn2IsjunhH0SmMn6JmVQ-kYuJUw9RMCtCK2Db2RoBuSmwyQtLuYGySeLrQBovs-Gaycu2vTJn--557BHT_mejLICa33jIMCn-Qispndo6v96nhSx5lMC7z_bd2V4Pp0t4Fyy6avrkAtop40ZQZ-mkYgjP1XMI2Mt4psrayfSBSaRsc9zPshoj0GCbQYZnpLXuA0dUcHYbzHI-ubpzkr-auCl7lXiOrw"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Đèn Hoa Điểm Ảnh</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary">★ 5.0 (94)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Đóa hoa khối nổi bật trên phần đế bậc thang.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">380.000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block"></span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded-xl font-label-ui text-label-ui transition-colors" href="product.html?model=1">
+              Chọn mẫu
+            </a>
+</div>
+</div>
+<!-- Card 3: Stepped Skyline Tower -->
+<div class="group flex flex-col bg-surface rounded-2xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<span class="absolute top-2 left-2 px-2 py-0.5 bg-tertiary text-on-tertiary rounded font-label-pixel-sm text-label-pixel-sm">ĐƯỢC YÊU THÍCH</span>
+<img alt="Đèn GUDNITE trong không gian trang trí" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClRHLNnJ4rPDL6dfBb72e602A72bNA4qDhEQVNyj62r2tYK0vL5dZqaTgsJ8a0tP_h49QYVWuW9ckAN-76iClko7Zzt3FsIoREACiuIGz-yJ1TcNUGD72vHAg8U1Fv7qp61Qpx0t8w8J4KWQ2FIW8PtBrz3RXNbbImVQBK9B0KLZrFPH5DcXlCVUPORfMgw9MhiRzzu9-mjxfr71KCOD3n3rrqvkSOFZg8Axiwfgf2qTeoRjr99iH8xA"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Đèn Tháp Thành Phố</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary">★ 4.8 (143)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Dáng tháp đô thị với những đường vân in 3D tinh tế.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">400.000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block"></span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded-xl font-label-ui text-label-ui transition-colors" href="product.html?model=2">
+              Chọn mẫu
+            </a>
+</div>
+</div>
+<!-- Card 4: Mini Cube Glow -->
+<div class="group flex flex-col bg-surface rounded-2xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container-low overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<span class="absolute top-2 left-2 px-2 py-0.5 bg-outline text-surface rounded font-label-pixel-sm text-label-pixel-sm">NHỎ GỌN</span>
+<img alt="Đèn GUDNITE trong không gian trang trí" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0n9nUayxkF5WCbaHYI1Y-7lQfn2IsjunhH0SmMn6JmVQ-kYuJUw9RMCtCK2Db2RoBuSmwyQtLuYGySeLrQBovs-Gaycu2vTJn--557BHT_mejLICa33jIMCn-Qispndo6v96nhSx5lMC7z_bd2V4Pp0t4Fyy6avrkAtop40ZQZ-mkYgjP1XMI2Mt4psrayfSBSaRsc9zPshoj0GCbQYZnpLXuA0dUcHYbzHI-ubpzkr-auCl7lXiOrw"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Đèn Khối Vuông Mini</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary">★ 4.9 (61)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Khối đèn nhỏ xinh cho bàn làm việc với cấu trúc tán sáng ba tầng.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">300.000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block"></span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded-xl font-label-ui text-label-ui transition-colors" href="product.html?model=3">
+              Chọn mẫu
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. HOW IT WORKS (Simple 4-Step Process) -->
+<section class="w-full py-space-xl bg-surface-container-lowest" id="how-it-works">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Từng bước đặt hàng ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface">Từ bản in số đến ánh sáng đầu giường</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Đặt hàng dễ dàng để mang ánh sáng ấm áp về không gian của bạn.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col gap-space-sm shadow-sm relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-primary bg-surface-container-high px-space-xs py-1 rounded w-fit">01 / KIỂU DÁNG</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Chọn mẫu đèn</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Chọn một trong bốn mẫu đèn khối đặc trưng, được thiết kế để tán ánh sáng 2700K dịu nhẹ cho phòng ngủ.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col gap-space-sm shadow-sm relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-secondary bg-secondary-fixed px-space-xs py-1 rounded w-fit">02 / PHỐI MÀU</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Chọn màu đế</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Phối với bàn phím, chăn ga hoặc góc bàn bằng sáu màu đế nhẹ nhàng và trung tính được tuyển chọn.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col gap-space-sm shadow-sm relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-tertiary bg-tertiary-fixed px-space-xs py-1 rounded w-fit">03 / THANH TOÁN</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Đặt hàng</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Các phương thức thanh toán dự kiến: MoMo, ZaloPay, thẻ ATM nội địa, Apple Pay hoặc thanh toán khi nhận hàng. Bản demo chưa hỗ trợ đặt hàng thực tế.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col gap-space-sm shadow-sm relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-primary bg-surface-container-high px-space-xs py-1 rounded w-fit">04 / GIAO HÀNG</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">In 3D &amp; giao hàng</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Chế tác bằng công nghệ in 3D đóng gói trong hộp giấy tổ ong chống va đập và giao đến tận nhà.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. WHY GUDNITE (4 Core Benefits) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase"></span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface leading-tight">
+          Khi chế tác thủ công gặp cảm hứng số hoài niệm
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Chúng tôi mang đến góc nhìn mới cho đèn đầu giường: những khối đèn ấm áp, giàu cảm giác chạm, được tạo nên từng lớp ngay tại Việt Nam.
+        </p>
+<div class="p-space-md bg-surface-container-low rounded-2xl flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">eco</span>
+</div>
+<div>
+<span class="font-headline-sm text-body-md font-bold text-on-surface block">Hạn chế lãng phí sợi in</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mỗi lượt in được chuẩn bị theo đơn hàng, sử dụng PLA từ tinh bột ngô tái tạo.</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Thiết kế điểm ảnh độc đáo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Hình khối bậc thang gợi nhớ đồ họa 8-bit kết hợp đường nét hiện đại, giúp ánh sáng lan tỏa nhẹ nhàng.
+          </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Công nghệ in 3D</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cấu trúc nhiều lớp siêu nhỏ giúp đón và tán ánh sáng LED, mang lại cảm giác dịu mắt.
+          </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Lõi LED tiết kiệm điện</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            LED vàng ấm 2700K có tuổi thọ thiết kế hơn 50.000 giờ, chỉ tiêu thụ 2,5W qua cổng USB-C tiêu chuẩn.
+          </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Đế đèn đa dạng màu sắc</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Đế bậc thang có thể thay đổi với sáu sắc màu, dễ kết hợp với không gian hiện đại.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. 3D PRINTING PROCESS (Visual Production Timeline) -->
+<section class="w-full py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Phía sau mỗi chiếc đèn ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface">Cách chúng tôi tạo nên từng điểm ảnh</h2>
+</div>
+<!-- Horizontal Timeline Tracker -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="p-space-md bg-surface rounded-2xl flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary">GIAI ĐOẠN 01</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-bold">Thiết kế CAD &amp; chia lớp in</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mỗi mẫu đèn được tính toán với chiều cao lớp in 0,16mm và mật độ thành phù hợp để hạn chế điểm sáng gắt.
+          </p>
+<div class="mt-2 text-primary font-label-pixel-sm text-[11px] bg-surface-container-high px-2 py-1 rounded w-fit">
+            DUNG SAI: ±0,05MM
+          </div>
+</div>
+<div class="p-space-md bg-surface rounded-2xl flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-pixel-sm text-label-pixel-sm text-secondary">GIAI ĐOẠN 02</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-bold">In liên tục trong 18 giờ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Quá trình in liên tục với nhiệt độ được kiểm soát tạo bề mặt nhám mịn và dáng khối bậc thang đặc trưng.
+          </p>
+<div class="mt-2 text-secondary font-label-pixel-sm text-[11px] bg-secondary-fixed px-2 py-1 rounded w-fit">
+            NHIỆT ĐỘ ỔN ĐỊNH: 215°C
+          </div>
+</div>
+<div class="p-space-md bg-surface rounded-2xl flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary">GIAI ĐOẠN 03</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-bold">Lắp ráp &amp; kiểm tra</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Lắp dây thủ công với linh kiện cách điện 5V, dây USB-C lõi đồng và kiểm tra vận hành trong 6 giờ trước khi xuất xưởng.
+          </p>
+<div class="mt-2 text-tertiary font-label-pixel-sm text-[11px] bg-tertiary-fixed px-2 py-1 rounded w-fit">
+            KIỂM TRA CHẠY THỬ: ĐẠT
+          </div>
+</div>
+<div class="p-space-md bg-surface rounded-2xl flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary">GIAI ĐOẠN 04</span>
+<h4 class="font-headline-sm text-body-lg text-on-surface font-bold">Đóng gói thân thiện môi trường</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Đèn được bảo vệ bằng giấy kraft tổ ong tái chế, không dùng nhựa, hạn chế va đập khi vận chuyển và sẵn sàng làm quà tặng.
+          </p>
+<div class="mt-2 text-primary font-label-pixel-sm text-[11px] bg-surface-container-high px-2 py-1 rounded w-fit">
+            KHÔNG DÙNG XỐP
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. LIFESTYLE SHOWCASE (Masonry Aesthetic Gallery) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Trong không gian thực tế ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface">Cảm hứng cho góc phòng</h2>
+</div>
+
+</div>
+<!-- Lifestyle Photo Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Setup 1: Bedside -->
+<div class="md:col-span-6 group relative rounded-3xl overflow-hidden aspect-[4/3] bg-surface-container shadow-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Đèn GUDNITE trong không gian trang trí" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrk9pXUbR3om3vGUs5WTKn1ZUU5oKDvgW4bKcAChJ1xIrf1JoUP45DGNa92MQOvwIDu3q0DiGnqnYJhJrGvZ3_WQ4bvykSsMO4ySWPKta56I-v3cjEbceXv8UcJGDYzV4G9wg0U7cy9HiV55DYdVxu09F06Pv-ynZhFnWdw-HhfWv5OQnayfsd8_wBP5Q5wBhlGcEqkGxyBVVBgr9xuoLrZtq6vaafNbERK6npDKNJb48fKXD02Xo9nA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary-fixed">GÓC ĐẦU GIƯỜNG</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">Phòng ngủ ấm áp</h4>
+<span class="font-body-sm text-body-sm text-outline-variant">Mẫu: Đèn Trụ Điểm Ảnh màu tím oải hương</span>
+</div>
+</div>
+<!-- Setup 2: Study Nook -->
+<div class="md:col-span-6 group relative rounded-3xl overflow-hidden aspect-[4/3] bg-surface-container shadow-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Đèn GUDNITE trong không gian trang trí" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwvoMKI5PYyzubpMmQfD4qPH5RjXYIAWQnWGm2hRQZUKXpRTbYJcQi-RvJzAeBIqcQblDoGlpn8lZDOHjr6rcVR88UdQgaEkxcDISHQWowyB19V9WKjBH-zl632YCkQDGStp0FCh9sblzN5EY-gwYru4RlOn6pI2eOflCr2r1ioXXcYUNpTfOlFSjLiqNl34QUMsYtNMI6TVVT_QqwTZtkOJLB3RU3J0E9qqeD25C0pN8vj0XnzJ1VQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-secondary-fixed">GÓC HỌC TẬP</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">Bàn đọc sách tối giản</h4>
+<span class="font-body-sm text-body-sm text-outline-variant">Mẫu: Đèn Hoa Điểm Ảnh màu hồng phấn</span>
+</div>
+</div>
+<!-- Setup 3: Cyber-Pastel Gaming -->
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden aspect-square bg-surface-container shadow-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Đèn GUDNITE trong không gian trang trí" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdk0nRSXXGwv1vT3-imaPj4gLOtsrb3r5m3b9I80_9XZQ8ZIeMdM5rfcl3-XkZ5GsfnCcCTj9RPe5mgC96lINWCeBZdyVBwDI5ImrEg-O2t3C42FrdhYQzgCOMaApvrlAHovh2Notb_TefJRBCaQpT6tBlB7B5Tgj8S1t2K4U47OHYKH9vP1NJ_iH_HAsiJNOEyfAN6NlvHIMo8PByCf5r4XIn-8VAcj6Zvw7M6sJtd1dKAlhCeWpl3g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary-fixed">GÓC CHƠI GAME</span>
+<h4 class="font-headline-sm text-body-lg font-bold">Góc bàn phím thư giãn</h4>
+</div>
+</div>
+<!-- Setup 4: Ceramic studio desk -->
+<div class="md:col-span-8 group relative rounded-3xl overflow-hidden aspect-[2/1] bg-surface-container shadow-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Đèn GUDNITE trong không gian trang trí" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt-QTpsU3BQQrKi0Jcv_pOMApcEJPJSUALCHwadSB4HtHLGIOa-QU0clxFlrsWwdwNFHr0EnYGjuoiETyQBc-iqcnRIkTRvLiMHw_rQAxkgRmW_M3wcg9hoeMUwiLxcM7-G8st-us6-GUaO_x_LiKuW6TiZYh0bTsf9bsQBSTchaw1U3fakvMb6SOIquucjTqMtS7mK-GHtnAyGAHOJzL3Wu_duVZO2n53TZ8tzfK8ebpJIZmH_6m--Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-tertiary-fixed">XƯỞNG SÀI GÒN</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">Nơi điểm ảnh trở thành hiện thực</h4>
+<span class="font-body-sm text-body-sm text-outline-variant">Xưởng sáng tạo tại Quận 3</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CUSTOMER REVIEWS -->
+<section class="w-full py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="text-center max-w-xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Phản hồi cộng đồng ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface">Được yêu thích trong từng góc bàn</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Review 1 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="text-tertiary text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Ánh sáng vàng dịu rất hợp với bàn đầu giường. Mình thích màu đế tím oải hương vì phối rất đẹp với bộ bàn phím cơ!"
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary font-headline-sm text-body-sm flex items-center justify-center font-bold">LN</div>
+<div>
+<span class="font-label-ui text-label-ui text-on-surface font-bold block">Linh Nguyễn</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant">Hà Nội • Đã xác thực (Đèn Trụ Điểm Ảnh)</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="text-tertiary text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Bề mặt in 3D cầm rất lạ tay, nhìn rõ từng lớp in tinh tế. Như mang một tác phẩm nghệ thuật khối vào phòng vậy."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary font-headline-sm text-body-sm flex items-center justify-center font-bold">MT</div>
+<div>
+<span class="font-label-ui text-label-ui text-on-surface font-bold block">Minh Trần</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant">Sài Gòn • Đã xác thực (Đèn Hoa Điểm Ảnh)</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg bg-surface rounded-2xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="text-tertiary text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Đóng gói chỉn chu như một tác phẩm trưng bày. Không dùng xốp, cắm USB-C rất tiện. Rất đáng thử nếu bạn thích trang trí phòng ngủ."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm flex items-center justify-center font-bold">AV</div>
+<div>
+<span class="font-label-ui text-label-ui text-on-surface font-bold block">Anh Võ</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant">Đà Nẵng • Đã xác thực (Đèn Tháp Thành Phố)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. FAQ SECTION (Accordion with 7 Key Questions) -->
+<section class="w-full py-space-xl bg-surface" id="faq">
+<div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="text-center flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Giải đáp &amp; thông tin ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface">Câu hỏi thường gặp</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tìm hiểu về vật liệu, cách chế tác và bảo quản đèn.</p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Q1 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Đèn GUDNITE được làm từ vật liệu gì?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Đèn GUDNITE được in 3D bằng nhựa PLA sinh học chất lượng cao, có nguồn gốc từ tinh bột thực vật lên men tái tạo. Hãy sử dụng và bảo quản đèn theo hướng dẫn của nhà sản xuất.
+          </p>
+</details>
+<!-- Q2 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Có những màu đế nào?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Bạn có thể phối bốn kiểu dáng với sáu màu đế: tím oải hương, hồng phấn, xanh da trời, xanh bạc hà, vàng kem và đen than. Chao đèn bậc thang phía trên luôn tỏa ánh sáng trắng ấm.
+          </p>
+</details>
+<!-- Q3 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Sản xuất và giao hàng mất bao lâu?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Đơn hàng được gửi từ xưởng in 3D tại Sài Gòn trong 24–48 giờ. Giao hàng nhanh trong nước mất 1–3 ngày làm việc; giao đến các nước Đông Nam Á mất 4–7 ngày.
+          </p>
+</details>
+<!-- Q4 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Đèn có nóng khi sử dụng không?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Lõi LED sử dụng điện một chiều 5V, công suất 2,5W và tỏa ít nhiệt. Sử dụng nguồn điện phù hợp, đặt đèn nơi thông thoáng và tuân thủ hướng dẫn sử dụng.
+          </p>
+</details>
+<!-- Q5 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Đèn sử dụng nguồn điện nào?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Mỗi đèn đi kèm dây USB-C bọc dù dài 1,5m, có công tắc trên dây. Có thể kết nối với củ sạc điện thoại, máy tính xách tay hoặc pin dự phòng tương thích.
+          </p>
+</details>
+<!-- Q6 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Chính sách bảo hành như thế nào?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Mỗi đèn GUDNITE được bảo hành đổi mới 12 tháng cho mô-đun LED và linh kiện điện. Các lỗi thuộc phạm vi bảo hành được thay thế miễn phí.
+          </p>
+</details>
+<!-- Q7 -->
+<details class="group bg-surface-container-low rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-on-surface font-bold">
+<span>Có thể khắc chữ hoặc đổi kiểu dáng không?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Để giữ khả năng tán sáng và chất lượng in 3D, chúng tôi không nhận khắc chữ hoặc thay đổi hình dáng riêng. Bạn có thể chọn trong bốn kiểu dáng và sáu màu đế có sẵn.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- 10. FINAL CALL TO ACTION -->
+<section class="w-full py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="relative rounded-3xl p-space-xl lg:p-20 overflow-hidden bg-gradient-to-br from-primary via-primary-container to-secondary text-center text-on-primary shadow-2xl flex flex-col items-center justify-center gap-space-md">
+<!-- Decorative Ambient Pixel Shapes -->
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-tertiary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute top-6 right-12 text-tertiary-fixed text-2xl animate-spin pointer-events-none">✦</div>
+<div class="absolute bottom-8 left-12 text-primary-fixed text-xl pointer-events-none">★</div>
+<span class="font-label-pixel-sm text-label-pixel-sm bg-surface-container-lowest/20 backdrop-blur px-space-sm py-1 rounded-full text-on-primary">
+          CHẾ TÁC TẠI SÀI GÒN • SẴN SÀNG GIAO HÀNG
+        </span>
+<h2 class="font-display-hero text-headline-lg-mobile lg:text-display-hero font-extrabold max-w-2xl leading-tight">
+          Tìm ánh sáng phù hợp cho không gian của bạn.
+        </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed max-w-md">
+          Chọn kiểu đèn yêu thích và phối màu đế phù hợp ngay hôm nay.
+        </p>
+<a class="mt-space-xs px-space-xl py-4 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl font-headline-sm text-body-lg font-bold shadow-[0_4px_0_#c4ab01] hover:translate-y-0.5 hover:shadow-[0_2px_0_#c4ab01] transition-all flex items-center gap-space-xs" href="product.html?model=0">
+<span>Mua đèn GUDNITE</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-space-md text-primary-fixed font-label-pixel-sm text-label-pixel-sm mt-space-sm">
+<span>⚡ Nguồn 5V tiết kiệm điện</span>
+<span>•</span>
+<span>🌱 100% PLA sinh học</span>
+<span>•</span>
+<span>🛡️ Bảo hành 1 năm</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Configurator Script -->
+
+</div></main><footer class="w-full bg-surface-container-low text-on-surface pt-space-xl pb-margin"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin"><div class="flex flex-col gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><a class="brand-logo" href="index.html" aria-label="Gudnite — Trang chủ"><img class="logo-light" src="assets/logo-light.png" alt="Gudnite" width="3508" height="2638"><img class="logo-dark" src="assets/logo-dark.png" alt="" aria-hidden="true" width="3508" height="2638"></a><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Thắp sáng không gian bằng từng điểm ảnh. Chế tác tại Sài Gòn bằng công nghệ in 3D chính xác, vật liệu PLA sinh học và ánh sáng ấm áp.</p><div class="flex flex-col gap-space-xs"><span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">// Nhận bản tin GUDNITE</span><form class="flex items-center gap-space-xs max-w-md"><input class="flex-1 bg-surface-container-lowest px-space-md py-2.5 rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none focus:shadow-[0_0_0_2px_rgba(107,56,212,0.3)]" placeholder="Nhập email của bạn..." type="email"/><button class="px-space-md py-2.5 bg-primary text-on-primary rounded-xl font-label-pixel-lg text-label-pixel-lg hover:bg-primary-container transition-all flex items-center justify-center gap-space-xs" type="submit"><span class="material-symbols-outlined text-[18px]">send</span></button></form></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-label-pixel-sm text-label-pixel-sm text-on-surface-variant text-center md:text-right">© 2025 GUDNITE. Bảo lưu mọi quyền. Dành cho những không gian ấm áp.</p></div></div></footer><dialog id="site-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title"></h2><button class="icon-button" id="close-dialog" aria-label="Đóng hộp thoại">✕</button></div><div id="dialog-content"></div></dialog><div id="site-toast" role="status" aria-live="polite" hidden></div><script src="site.js"></script></body></html>
