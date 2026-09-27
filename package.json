@@ -1,0 +1,1 @@
+{"name":"gudnite-website","version":"1.0.0","private":true,"scripts":{"build":"node build.cjs","start":"node server.cjs","check":"node --check site.js && node --check theme.js && node --check build.cjs && node --check server.cjs"},"devDependencies":{"@playwright/test":"^1.63.0"}}

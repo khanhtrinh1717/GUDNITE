@@ -1,0 +1,12 @@
+node_modules/
+test-results/
+playwright-report/
+tests/artifacts/
+
+# Deployment and private settings
+dist/
+.vercel/
+.env
+.env.*
+!.env.example
+*.log

@@ -1,0 +1,8 @@
+node_modules
+tests
+test-results
+playwright-report
+stitch_gudnite_3d_lamp_e_commerce_ui
+.git
+.env
+.env.*
