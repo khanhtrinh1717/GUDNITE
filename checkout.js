@@ -5,8 +5,8 @@ function render(){
  document.querySelector('#checkout-empty').hidden=cart.length>0;
  document.querySelector('#checkout-layout').hidden=!cart.length;
  document.querySelector('#checkout-items').innerHTML=cart.map(item=>{
- const fallback=['assets/twist/TWIST_mix_01.png','assets/lumia/LUMIA_blue_01.png','assets/ripple/RIPPLE_blue_01.png'];
- const src=typeof item.image==='string'&&/^assets\/(twist|lumia|ripple)\/[A-Za-z0-9_]+\.png$/.test(item.image)?item.image:fallback[item.model];
+ const fallback=['assets/twist/TWIST_mix_01.png','assets/lumia/LUMIA_blue_01.png','assets/ripple/RIPPLE_blue_01.png','assets/mellow/yellow_01.png','assets/fire/Fire_Camden.png','assets/kumo/KUMO_main.png','assets/wood/WOOD_main.png','assets/toadstool/TOADSTOOL_Black.png'];
+ const src=typeof item.image==='string'&&/^assets\/(twist|lumia|ripple|mellow|fire|kumo|wood|toadstool)\/[A-Za-z0-9_]+\.(png|jpg)$/.test(item.image)?item.image:fallback[item.model];
  return `<div class="checkout-item">${src?`<img src="${escapeHTML(src)}" alt="${escapeHTML(models[item.model].name)}">`:'<span class="material-symbols-outlined">light</span>'}<div><strong>${models[item.model].name}</strong><small>${escapeHTML(item.color)} · Số lượng: ${item.qty}</small></div><strong>${money(models[item.model].price*item.qty)}</strong></div>`;
  }).join('');
  const subtotal=cart.reduce((sum,item)=>sum+models[item.model].price*item.qty,0);

@@ -2,13 +2,23 @@ const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const storage = {get(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}},set(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch{}}};
 const models = [
-  {name:'TWIST',price:350000},
-  {name:'LUMIA',price:380000},
-  {name:'RIPPLE',price:400000},
-  {name:'Đèn Khối Vuông Mini',price:300000}
+  {name:'TWIST',price:250000},
+  {name:'LUMIA',price:350000},
+  {name:'RIPPLE',price:300000},
+  {name:'MELLOW',price:250000},
+  {name:'FIRE',price:350000},
+  {name:'KUMO',price:300000},
+  {name:'WOOD',price:300000},
+  {name:'TOADSTOOL',price:300000}
 ];
-const modelIndex = Math.max(0,Math.min(3,Number(new URLSearchParams(location.search).get('model'))||0));
+const requestedModel = Number(new URLSearchParams(location.search).get('model'));
+const modelIndex = Number.isInteger(requestedModel) && models[requestedModel] ? requestedModel : 0;
 const model = models[modelIndex];
+// WOOD has a separate USB-powered lighting system.
+if(model.name==='WOOD'){
+  const woodLighting={socket:'USB',summary:'LED dạng chấm · Cấp nguồn USB',light:'LED dạng chấm',type:'Hệ thống LED dạng chấm cấp nguồn USB',lifetime:'Tuổi thọ theo thông tin linh kiện LED',power:'Cấp nguồn USB',connection:'Dùng nguồn USB phù hợp với sản phẩm',rating:'Công suất và điện áp: chờ xác nhận',assembly:'Lắp hệ thống LED dạng chấm',process:'WOOD sử dụng LED dạng chấm được cấp nguồn qua USB.'};
+  $$('[data-lighting]').forEach(element=>{element.textContent=woodLighting[element.dataset.lighting]});
+}
 const money = value => value.toLocaleString('vi-VN')+'₫';
 const escapeHTML = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let qty=1, color='Tím oải hương', toastTimer;
@@ -24,7 +34,6 @@ $('#close-dialog').onclick=()=>dialog.close();
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
 function syncTheme(){const dark=document.documentElement.classList.contains('dark');const button=$('#theme-toggle');button.setAttribute('aria-label',dark?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối');button.setAttribute('aria-pressed',String(dark));button.title=dark?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';button.firstElementChild.textContent=dark?'light_mode':'dark_mode'}
 $('#theme-toggle').onclick=()=>{document.documentElement.classList.toggle('dark');try{localStorage.setItem('gudnite-theme',document.documentElement.classList.contains('dark')?'dark':'light')}catch{}syncTheme()};syncTheme();
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem('gudnite-theme'))return}catch{}document.documentElement.classList.toggle('dark',e.matches);syncTheme()});
 $('#menu-toggle').onclick=()=>{const menu=$('#mobile-menu');menu.hidden=!menu.hidden;$('#menu-toggle').setAttribute('aria-expanded',String(!menu.hidden))};
 $$('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{$('#mobile-menu').hidden=true;$('#menu-toggle').setAttribute('aria-expanded','false')}));
 function updateCart(){document.dispatchEvent(new Event('cart-updated'));storage.set('gudnite-cart',cart);const count=cart.reduce((n,x)=>n+x.qty,0);$$('[data-path="cart"]').forEach(a=>{a.setAttribute('aria-label',`Giỏ hàng, ${count} sản phẩm`);const badge=a.querySelector('span:last-child');if(badge)badge.textContent=count})}
@@ -52,7 +61,7 @@ $$('button').forEach(button=>{
   if(button.getAttribute('aria-label')==='Phóng to ảnh đèn')button.addEventListener('click',()=>showDialog(model.name,`<img class="zoom-image" alt="${model.name}" src="${escapeHTML($('#main-lamp-img').src)}">`));
 });
 $$('footer form').forEach(form=>{const input=form.querySelector('input');input.required=true;input.setAttribute('aria-label','Địa chỉ email');form.addEventListener('submit',e=>{e.preventDefault();notify('Bản dùng thử chưa kết nối dịch vụ bản tin. Email chưa được gửi.')} )});
-const search=$('header input');if(search){search.setAttribute('aria-label','Tìm đèn');search.addEventListener('keydown',e=>{if(e.key!=='Enter')return;e.preventDefault();const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLowerCase();const query=normalize(search.value.trim());const results=models.map((m,i)=>({...m,index:i})).filter(m=>normalize(m.name).includes(query));showDialog('Tìm đèn',results.length?results.map(m=>`<a class="site-primary" href="product.html?model=${m.index}">${m.name} · ${money(m.price)}</a>`).join(''):'<p>Không tìm thấy đèn phù hợp. Hãy thử “Trụ”, “Hoa” hoặc “Mini”.</p>')})}
+const search=$('header input');if(search){search.setAttribute('aria-label','Tìm đèn');search.addEventListener('keydown',e=>{if(e.key!=='Enter')return;e.preventDefault();const normalize=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLowerCase();const query=normalize(search.value.trim());const results=models.map((m,i)=>({...m,index:i})).filter(m=>normalize(m.name).includes(query));showDialog('Tìm đèn',results.length?results.map(m=>`<a class="site-primary" href="product.html?model=${m.index}">${m.name} · ${money(m.price)}</a>`).join(''):'<p>Không tìm thấy đèn phù hợp. Hãy thử “TWIST”, “LUMIA”, “RIPPLE” hoặc “MELLOW”.</p>')})}
 $$('img').forEach(img=>{if(!img.alt)img.alt=img.dataset.alt||'Chi tiết đèn GUDNITE';if(!img.closest('header')&&img.id!=='main-lamp-img')img.loading='lazy'});
 updateCart();
 $$('footer [data-path="shop"]').forEach((a,i)=>{if(i<4)a.href='product.html?model='+i});
@@ -66,7 +75,7 @@ if($('#add-to-cart-btn')){
 }
 
 // Product-specific colors and photos.
-const variantTemplate=$(['#twist-variants','#lumia-variants','#ripple-variants'][modelIndex]||'#no-product-variants');
+const variantTemplate=$(['#twist-variants','#lumia-variants','#ripple-variants','#mellow-variants','#fire-variants','#kumo-variants','#wood-variants','#toadstool-variants'][modelIndex]||'#no-product-variants');
 if($('#main-lamp-img') && variantTemplate){
   const group=$('#swatch-group');
   group.className='twist-swatches';
@@ -83,28 +92,25 @@ if($('#main-lamp-img') && variantTemplate){
   const label=$('#selected-color-label');
   label.setAttribute('aria-live','polite');
   label.parentElement.classList.add('twist-color-heading');
-  function selectVariant(index){
+  function selectVariant(index,source){
     const chosen=swatches[index];
     color=chosen.dataset.color;
-    mainImage.src=chosen.dataset.image;
+    mainImage.src=source||chosen.dataset.image;
     mainImage.alt=model.name+' — '+color;
     label.textContent=color;
     swatches.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
-    [...gallery.children].forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+    [...gallery.children].forEach((button,i)=>button.setAttribute('aria-pressed',String(button.dataset.image===(source||chosen.dataset.image))));
   }
   swatches.forEach((swatch,index)=>{
-    const thumbnail=document.createElement('button');
-    thumbnail.type='button';
-    thumbnail.className='gallery-thumb twist-thumbnail';
-    thumbnail.setAttribute('aria-label','Xem ảnh '+swatch.dataset.color);
-    const img=document.createElement('img');
-    img.src=swatch.dataset.image;
-    img.alt=model.name+' — '+swatch.dataset.color;
-    img.loading='lazy';
-    thumbnail.append(img);
-    thumbnail.addEventListener('click',()=>selectVariant(index));
+    [swatch.dataset.image,swatch.dataset.extraImage,swatch.dataset.detailImage].filter(Boolean).forEach((source,photo)=>{
+      const thumbnail=document.createElement('button');
+      thumbnail.type='button';thumbnail.className='gallery-thumb twist-thumbnail';
+      thumbnail.dataset.image=source;
+      thumbnail.setAttribute('aria-label','Xem ảnh '+swatch.dataset.color+' '+(photo+1));
+      const img=document.createElement('img');img.src=source;img.alt=model.name+' — '+swatch.dataset.color;img.loading='lazy';
+      thumbnail.append(img);thumbnail.addEventListener('click',()=>selectVariant(index,source));gallery.append(thumbnail);
+    });
     swatch.addEventListener('click',()=>selectVariant(index));
-    gallery.append(thumbnail);
   });
   if(variantTemplate.dataset.overview){
     const overview=document.createElement('button');

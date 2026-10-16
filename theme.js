@@ -1,6 +1,6 @@
 (() => {
   let theme;
   try { theme = localStorage.getItem('gudnite-theme'); } catch {}
-  const dark = theme ? theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const dark = theme === 'dark';
   document.documentElement.classList.toggle('dark', dark);
 })();

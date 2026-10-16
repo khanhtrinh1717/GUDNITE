@@ -1,0 +1,43 @@
+const {test,expect}=require('@playwright/test');
+test('theme persists between pages and cart preserves variant and quantity',async({page})=>{
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('/');
+  await page.locator('#theme-toggle').click();
+  const dark=await page.locator('html').evaluate(el=>el.classList.contains('dark'));
+  await page.locator('#shop-models a').first().click();
+  await expect(page).toHaveURL(/product.html\?model=0/);
+  expect(await page.locator('html').evaluate(el=>el.classList.contains('dark'))).toBe(dark);
+  await page.getByRole('button',{name:'Chọn màu hồng thạch anh'}).click();
+  await page.getByRole('button',{name:'+',exact:true}).click();
+  await page.locator('#add-to-cart-btn').click();
+  await page.locator('header [data-path="cart"]').click();
+  await expect(page.locator('#dialog-content')).toContainText('Hồng thạch anh');
+  await expect(page.locator('.cart-total')).toContainText('700.000₫');
+  await page.reload();
+  await page.locator('header [data-path="cart"]').click();
+  await expect(page.locator('.cart-total')).toContainText('700.000₫');
+  await page.locator('[data-remove]').click();
+  await expect(page.locator('#dialog-content')).toContainText('Giỏ hàng đang trống');
+  expect(errors).toEqual([]);
+});
+test('mobile navigation and theme stay accessible without horizontal overflow',async({page})=>{
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('/');
+  await expect(page.locator('#theme-toggle')).toBeVisible();
+  await page.locator('#menu-toggle').click();
+  await expect(page.locator('#mobile-menu')).toBeVisible();
+  await page.locator('#mobile-menu a').filter({hasText:'Hỏi đáp'}).click();
+  await expect(page.locator('#mobile-menu')).toBeHidden();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.screenshot({path:'tests/artifacts/mobile.png',fullPage:false});
+});
+test('search finds the right product and checkout opens a demo cart',async({page})=>{
+  await page.goto('/');
+  await page.getByRole('textbox',{name:'Tìm đèn'}).fill('Hoa');
+  await page.getByRole('textbox',{name:'Tìm đèn'}).press('Enter');
+  await page.locator('#dialog-content a').click();
+  await expect(page.locator('h1')).toHaveText('Đèn Hoa Điểm Ảnh');
+  await page.getByRole('button',{name:/Thanh toán với/}).click();
+  await expect(page.locator('.cart-total')).toContainText('380.000₫');
+  await expect(page.locator('#dialog-content')).toContainText('chưa kết nối');
+});

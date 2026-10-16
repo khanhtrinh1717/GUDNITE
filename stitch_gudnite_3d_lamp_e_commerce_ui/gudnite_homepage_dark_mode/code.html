@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-tint": "#ddb8ff",
+          "inverse-primary": "#7b41b4",
+          "on-surface": "#e6e0ee",
+          "on-secondary": "#620040",
+          "text-muted": "#9CA3AF",
+          "on-secondary-container": "#ff93c8",
+          "primary-container": "#c084fc",
+          "surface-container-high": "#2b2933",
+          "outline": "#978d9d",
+          "surface": "#14121b",
+          "on-tertiary-fixed-variant": "#524600",
+          "surface-variant": "#36333e",
+          "surface-highlight": "#262237",
+          "on-tertiary-fixed": "#211b00",
+          "inverse-surface": "#e6e0ee",
+          "background": "#14121b",
+          "secondary-fixed-dim": "#ffafd3",
+          "on-primary-fixed-variant": "#62259b",
+          "secondary-container": "#85145a",
+          "on-surface-variant": "#cec3d3",
+          "error-container": "#93000a",
+          "ambient-2700k": "#FBBF24",
+          "error": "#ffb4ab",
+          "tertiary-fixed-dim": "#e2c62d",
+          "on-background": "#e6e0ee",
+          "surface-elevated": "#1B1827",
+          "on-tertiary-container": "#403600",
+          "inverse-on-surface": "#322f39",
+          "primary": "#ddb8ff",
+          "on-error": "#690005",
+          "surface-container-highest": "#36333e",
+          "surface-bright": "#3b3842",
+          "primary-fixed": "#f0dbff",
+          "surface-container": "#211e28",
+          "on-primary-fixed": "#2c0051",
+          "on-error-container": "#ffdad6",
+          "tertiary": "#e2c62d",
+          "secondary-fixed": "#ffd8e7",
+          "on-secondary-fixed-variant": "#85145a",
+          "surface-dim": "#14121b",
+          "tertiary-fixed": "#ffe24c",
+          "primary-fixed-dim": "#ddb8ff",
+          "surface-slate": "#13111C",
+          "surface-container-low": "#1c1a24",
+          "border-glow": "#352F4C",
+          "surface-container-lowest": "#0f0d16",
+          "on-secondary-fixed": "#3d0026",
+          "celestial-cyan": "#38BDF8",
+          "tertiary-container": "#b79f00",
+          "outline-variant": "#4c4452",
+          "secondary": "#ffafd3",
+          "on-tertiary": "#393000",
+          "text-primary": "#F5F3FF",
+          "on-primary": "#490081",
+          "on-primary-container": "#500989"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1.25rem",
+          "margin": "3rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-pixel-sm": [
+            "Space Mono"
+          ],
+          "label-ui": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-pixel-lg": [
+            "Space Mono"
+          ]
+        },
+        "fontSize": {
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-pixel-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.1em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-ui": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-pixel-lg": [
+            "13px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-secondary"><header class="fixed top-0 left-0 w-full z-50 bg-[#14121b]/80 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="h-9 w-9 rounded-xl bg-surface-container-high border border-white/10 flex items-center justify-center p-1 shadow-[0_0_15px_rgba(221,184,255,0.2)]"><img alt="GUDNITE Brand Logo" class="h-full w-full object-contain filter brightness-110" src="https://lh3.googleusercontent.com/aida/AEtjO1Ui-Eq2JdD973wLbNQrVDWwi009IXyAE8d-eJYslefhSdMj172QLtyNmRRqbg5uCt5SoWF7z5xuzs8tN9XrSv6khxkOmjCQ4qpWruzhveHRuo5fG1eFm7dKcbvFFPsigmMr-Ittmv4PHOSelFcmcjLTwU08z9tMfxBZy141Wj1bxQhUrraQc3lmAk__XEZ18s-i36UKLCJB7Xg5EOCyzd8ZsVyvItmIKW5-8Ju9lpakOMyWuSokrPCqZnAE"/></div><a class="flex items-center gap-space-xs" data-path="home" href="#"><span class="font-headline-sm text-headline-sm tracking-tight text-text-primary font-bold">GUDNITE</span><span class="font-label-pixel-sm text-label-pixel-sm px-space-xs py-0.5 bg-secondary-container text-secondary border border-secondary/30 rounded shadow-[0_0_8px_rgba(255,175,211,0.2)]">SAIGON</span></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"><a aria-current="page" class="transition-colors text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full drop-shadow-[0_0_8px_rgba(221,184,255,0.6)]" data-path="home" href="#">Home</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary transition-colors" data-path="shop" href="#">Shop</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary transition-colors" data-path="collections" href="#">Collections</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">About Us</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center bg-surface-container-low border border-white/5 rounded-xl px-space-sm py-1.5 focus-within:border-primary/40 focus-within:shadow-[0_0_12px_rgba(221,184,255,0.25)] transition-all"><span class="material-symbols-outlined text-primary text-[18px] mr-space-xs">search</span><input class="bg-transparent border-0 outline-none text-text-primary placeholder:text-outline font-body-sm text-body-sm w-36 lg:w-44" placeholder="Search pixel lamps..." type="text"/></div><button aria-label="Customer wishlist" class="w-10 h-10 rounded-xl bg-surface-container-low border border-white/5 flex items-center justify-center text-on-surface-variant hover:border-primary/30 hover:text-primary transition-all"><span class="material-symbols-outlined text-[20px]">favorite</span></button><a aria-label="Cart with 2 items" class="relative w-10 h-10 rounded-xl bg-surface-container-low border border-white/5 flex items-center justify-center text-on-surface-variant hover:border-primary/30 hover:text-primary transition-all" data-path="cart" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 bg-secondary-container text-secondary border border-secondary/40 rounded-full font-label-pixel-sm text-[10px] flex items-center justify-center leading-none font-bold shadow-[0_0_8px_rgba(255,175,211,0.4)]">2</span></a><div class="w-8 h-8 rounded-full bg-primary-container/30 border border-primary/40 flex items-center justify-center shadow-[0_0_10px_rgba(192,132,252,0.3)]"><span class="material-symbols-outlined text-primary text-[18px]">person</span></div><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2.5 bg-gradient-to-r from-primary to-primary-container text-[#14121b] font-bold rounded-xl font-headline-sm text-body-sm shadow-[0_0_20px_rgba(221,184,255,0.35)] hover:shadow-[0_0_25px_rgba(221,184,255,0.5)] hover:brightness-110 transition-all" data-path="shop" href="#"><span class="font-label-ui text-label-ui tracking-wide">Shop Now</span></a></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner -->
+<div class="w-full bg-[#1c1a24] border-b border-purple-500/20 py-2 px-margin-mobile lg:px-margin text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-amber-500/10 to-purple-900/10 pointer-events-none"></div>
+<p class="relative font-label-pixel-sm text-label-pixel-sm text-primary flex items-center justify-center gap-space-xs tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-ambient-2700k shadow-[0_0_8px_#FBBF24] animate-pulse"></span>
+      SPRING 2025 BATCH: 4 SIGNATURE SILHOUETTES • 6 MATTE BASE HUES • FREE NATIONWIDE VN SHIPPING
+    </p>
+</div>
+<!-- 1. HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-24">
+<!-- Ambient Radial Glow Layers for Cozy Night Feeling -->
+<div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 left-1/4 w-96 h-96 bg-ambient-2700k/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<div class="absolute bottom-10 right-1/3 w-80 h-80 bg-secondary/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Copy Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md z-10">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-sm py-1 bg-surface-container-high border border-purple-500/30 rounded-full font-label-pixel-sm text-label-pixel-sm text-primary flex items-center gap-1 shadow-[0_0_12px_rgba(221,184,255,0.15)]">
+<span class="material-symbols-outlined text-[14px] text-amber-400">local_fire_department</span>
+            GEN 2 PIXEL EMISSION
+          </span>
+<span class="px-space-sm py-1 bg-secondary-container/60 border border-secondary/30 text-secondary rounded-full font-label-pixel-sm text-label-pixel-sm shadow-[0_0_10px_rgba(255,175,211,0.2)]">
+            SAIGON DESIGN LAB
+          </span>
+</div>
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero text-text-primary tracking-tight">
+          Light Up Your Space, <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-ambient-2700k drop-shadow-[0_0_25px_rgba(221,184,255,0.4)]">
+            Pixel by Pixel.
+          </span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Discover decorative night lamps sculpted with additive 3D printing technology. Select one of four artisanal stepped forms, choose a signature base color, and illuminate your bedside with a tranquil 2700K ambient glow.
+        </p>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-3.5 bg-gradient-to-r from-primary to-primary-container text-[#14121b] rounded-xl font-headline-sm text-body-md font-bold shadow-[0_0_25px_rgba(221,184,255,0.45)] hover:shadow-[0_0_35px_rgba(221,184,255,0.6)] hover:brightness-110 transition-all flex items-center gap-space-xs" href="#shop-models">
+<span>Explore Lamps</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="px-space-lg py-3.5 bg-surface-container border border-white/10 text-on-surface hover:text-text-primary rounded-xl font-label-ui text-label-ui shadow-sm hover:border-purple-500/40 hover:bg-surface-container-high transition-all flex items-center gap-space-xs" href="#how-it-works">
+<span class="material-symbols-outlined text-primary text-[20px]">view_in_ar</span>
+<span>How It's Made</span>
+</a>
+</div>
+<!-- Social Proof Stats Ribbon -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-lg max-w-lg">
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-white/5">
+<span class="font-label-pixel-lg text-label-pixel-lg text-primary block">4,200+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rooms lit in VN</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-white/5">
+<div class="flex items-center gap-0.5 text-ambient-2700k font-label-pixel-lg text-label-pixel-lg">
+<span>★ 4.9</span>
+<span class="text-on-surface-variant font-body-sm text-[12px]">/ 5</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">500+ verified ratings</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low border border-white/5">
+<span class="font-label-pixel-lg text-label-pixel-lg text-secondary block">FREE 3D</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Express VN delivery</span>
+</div>
+</div>
+</div>
+<!-- Hero Featured Lamp Showcase -->
+<div class="lg:col-span-5 relative flex items-center justify-center">
+<!-- Floating Pill Badges around lamp -->
+<div class="absolute -top-4 -left-4 z-20 px-space-sm py-1.5 bg-surface-container-high/90 border border-white/10 backdrop-blur-md rounded-xl shadow-xl flex items-center gap-1.5">
+<span class="material-symbols-outlined text-ambient-2700k text-[16px]">bolt</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-text-primary">5V USB-C • 2.5W</span>
+</div>
+<div class="absolute -bottom-2 -right-4 z-20 px-space-sm py-1.5 bg-surface-container-high/90 border border-white/10 backdrop-blur-md rounded-xl shadow-xl flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">compost</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-text-primary">100% Bio-based PLA</span>
+</div>
+<!-- 8-Bit Pixel Sparkles -->
+<div class="absolute top-12 right-6 text-ambient-2700k animate-bounce text-xl pointer-events-none drop-shadow-[0_0_8px_#FBBF24]">✦</div>
+<div class="absolute bottom-20 left-4 text-primary text-sm pointer-events-none drop-shadow-[0_0_8px_#ddb8ff]">◆</div>
+<!-- Product Image Stage with warm ambient halo -->
+<div class="relative w-full max-w-md aspect-square rounded-3xl p-4 bg-gradient-to-b from-[#1c1a24] to-[#262332] border border-purple-500/20 shadow-[0_0_50px_rgba(221,184,255,0.18)] flex items-center justify-center overflow-hidden">
+<!-- Lamp Ambient Core Glow -->
+<div class="absolute inset-0 bg-radial from-amber-400/25 via-purple-500/15 to-transparent pointer-events-none"></div>
+<div class="absolute w-56 h-56 bg-ambient-2700k/30 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+<img alt="GUDNITE The Pixel Monolith night lamp glowing warm orange on lavender stepped base" class="relative z-10 w-full h-full object-contain filter drop-shadow-[0_0_35px_rgba(251,191,36,0.5)] hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XVdVj1ei3DYDhZ3bfCVgb7a7GYEnaKUbZnfBEER1R3HVEIONBlJMj9GWzpUlf7o-IbqPUjd2idWTGll2d4LgSiUqn7AhfmcoByUJUCCkIsM-eAVHX1pOkBfmVDtAPS8q9n6SkRo3u0-U1LNXP3ipbF_wy2XpDg__sNrpqt4umvZEnhfjTFesMyVZ5AfE0VRyd4xFtes8RnTUD7eE_k5RhhBidDmDm85RZsRc4am3smzrm7NApWWkaJftY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. FEATURED PRODUCTS SECTION -->
+<section class="w-full py-space-xl bg-[#0f0d16] border-y border-white/5" id="shop-models">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Catalogue • Signature Silhouettes ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">Artisanal 3D Night Lamps</h2>
+</div>
+<div class="px-space-sm py-2 bg-surface-container-low border border-white/5 rounded-xl font-label-pixel-sm text-label-pixel-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+          Choose silhouette • Customize base color
+        </div>
+</div>
+<!-- 4-Column Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: The Pixel Monolith -->
+<div class="group flex flex-col bg-[#1c1a24] border border-white/5 hover:border-purple-500/30 rounded-2xl p-space-md shadow-lg hover:shadow-[0_0_30px_rgba(221,184,255,0.15)] transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-[#14121b] border border-white/5 overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<div class="absolute inset-0 bg-radial from-amber-400/20 via-transparent to-transparent pointer-events-none"></div>
+<span class="absolute top-2 left-2 z-10 px-2 py-0.5 bg-primary text-[#14121b] font-bold rounded font-label-pixel-sm text-label-pixel-sm shadow-[0_0_8px_rgba(221,184,255,0.4)]">BEST SELLER</span>
+<img alt="The Pixel Monolith Lamp" class="w-full h-full object-contain group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(251,191,36,0.35)] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1XVdVj1ei3DYDhZ3bfCVgb7a7GYEnaKUbZnfBEER1R3HVEIONBlJMj9GWzpUlf7o-IbqPUjd2idWTGll2d4LgSiUqn7AhfmcoByUJUCCkIsM-eAVHX1pOkBfmVDtAPS8q9n6SkRo3u0-U1LNXP3ipbF_wy2XpDg__sNrpqt4umvZEnhfjTFesMyVZ5AfE0VRyd4xFtes8RnTUD7eE_k5RhhBidDmDm85RZsRc4am3smzrm7NApWWkaJftY"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-text-primary font-bold">The Monolith</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">★ 4.9 (218)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Architectural stepped pillar casting warm bedtime glow.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1,190,000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block">~$48 USD</span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high border border-purple-500/20 text-primary hover:bg-primary hover:text-[#14121b] rounded-xl font-label-ui text-label-ui transition-all" href="#studio">
+              Configure
+            </a>
+</div>
+</div>
+<!-- Card 2: Pixel Bloom -->
+<div class="group flex flex-col bg-[#1c1a24] border border-white/5 hover:border-pink-500/30 rounded-2xl p-space-md shadow-lg hover:shadow-[0_0_30px_rgba(255,175,211,0.15)] transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-[#14121b] border border-white/5 overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<div class="absolute inset-0 bg-radial from-pink-400/20 via-transparent to-transparent pointer-events-none"></div>
+<span class="absolute top-2 left-2 z-10 px-2 py-0.5 bg-secondary text-[#14121b] font-bold rounded font-label-pixel-sm text-label-pixel-sm shadow-[0_0_8px_rgba(255,175,211,0.4)]">NEW DROP</span>
+<img alt="Pixel Bloom Lamp" class="w-full h-full object-contain group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(255,175,211,0.35)] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1Xx_KY61NyvoJ6ua_FUdRx8JU16Wjdfc2YnIFylUxFFi_jY_vX0OqjIQKhUp18Kxkp-Qg1r9jnJiPA4SmNaWNcDFhLUw3ubN5Z2OfpiOkcCWk6UzycVSsZCbL50zfZkO2bsdbhbS58RCWneDq0AXPHiKKjRDBun7UVncT2pZhWoKwDc3oItoRxwiezb3yVYscD_YHY7JO-JutMFh7yYkdJ32DA-aZFC4ssV7wyIGdfF868BsgDuMaPWr84"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-text-primary font-bold">Pixel Bloom</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">★ 5.0 (94)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Organic voxel bloom resting on stepped pedestal base.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1,290,000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block">~$52 USD</span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high border border-purple-500/20 text-primary hover:bg-primary hover:text-[#14121b] rounded-xl font-label-ui text-label-ui transition-all" href="#studio">
+              Configure
+            </a>
+</div>
+</div>
+<!-- Card 3: Stepped Skyline Tower -->
+<div class="group flex flex-col bg-[#1c1a24] border border-white/5 hover:border-amber-500/30 rounded-2xl p-space-md shadow-lg hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-[#14121b] border border-white/5 overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<div class="absolute inset-0 bg-radial from-amber-400/20 via-transparent to-transparent pointer-events-none"></div>
+<span class="absolute top-2 left-2 z-10 px-2 py-0.5 bg-ambient-2700k text-[#14121b] font-bold rounded font-label-pixel-sm text-label-pixel-sm shadow-[0_0_8px_rgba(251,191,36,0.4)]">TRENDING</span>
+<img alt="Stepped Skyline Tower Lamp" class="w-full h-full object-contain group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(251,191,36,0.35)] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1XVdVj1ei3DYDhZ3bfCVgb7a7GYEnaKUbZnfBEER1R3HVEIONBlJMj9GWzpUlf7o-IbqPUjd2idWTGll2d4LgSiUqn7AhfmcoByUJUCCkIsM-eAVHX1pOkBfmVDtAPS8q9n6SkRo3u0-U1LNXP3ipbF_wy2XpDg__sNrpqt4umvZEnhfjTFesMyVZ5AfE0VRyd4xFtes8RnTUD7eE_k5RhhBidDmDm85RZsRc4am3smzrm7NApWWkaJftY"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-text-primary font-bold">Skyline Tower</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">★ 4.8 (143)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Vertical metropolis profile with tactile filament striations.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1,350,000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block">~$55 USD</span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high border border-purple-500/20 text-primary hover:bg-primary hover:text-[#14121b] rounded-xl font-label-ui text-label-ui transition-all" href="#studio">
+              Configure
+            </a>
+</div>
+</div>
+<!-- Card 4: Mini Cube Glow -->
+<div class="group flex flex-col bg-[#1c1a24] border border-white/5 hover:border-purple-500/30 rounded-2xl p-space-md shadow-lg hover:shadow-[0_0_30px_rgba(221,184,255,0.15)] transition-all duration-300">
+<div class="relative w-full aspect-square rounded-xl bg-[#14121b] border border-white/5 overflow-hidden flex items-center justify-center p-2 mb-space-sm">
+<div class="absolute inset-0 bg-radial from-purple-400/20 via-transparent to-transparent pointer-events-none"></div>
+<span class="absolute top-2 left-2 z-10 px-2 py-0.5 bg-surface-container-high border border-white/10 text-on-surface rounded font-label-pixel-sm text-label-pixel-sm">COMPACT</span>
+<img alt="Mini Cube Glow Lamp" class="w-full h-full object-contain group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(221,184,255,0.35)] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1Xx_KY61NyvoJ6ua_FUdRx8JU16Wjdfc2YnIFylUxFFi_jY_vX0OqjIQKhUp18Kxkp-Qg1r9jnJiPA4SmNaWNcDFhLUw3ubN5Z2OfpiOkcCWk6UzycVSsZCbL50zfZkO2bsdbhbS58RCWneDq0AXPHiKKjRDBun7UVncT2pZhWoKwDc3oItoRxwiezb3yVYscD_YHY7JO-JutMFh7yYkdJ32DA-aZFC4ssV7wyIGdfF868BsgDuMaPWr84"/>
+</div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-headline-sm text-body-lg text-text-primary font-bold">Mini Cube Glow</span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">★ 4.9 (61)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Desk buddy cube with 3-stage diffused micro-apertures.</p>
+<div class="flex items-center justify-between mt-auto pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">950,000₫</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant block">~$38 USD</span>
+</div>
+<a class="px-space-sm py-2 bg-surface-container-high border border-purple-500/20 text-primary hover:bg-primary hover:text-[#14121b] rounded-xl font-label-ui text-label-ui transition-all" href="#studio">
+              Configure
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. CHOOSE YOUR BASE COLOR (Interactive Live Product Preview Studio) -->
+<section class="w-full py-space-xl bg-surface relative" id="studio">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="p-space-lg lg:p-space-xl bg-[#1c1a24] border border-purple-500/20 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.6)] grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative overflow-hidden">
+<!-- Background decorative ambient halo -->
+<div class="absolute -top-24 -left-24 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Left Side: Dynamic Preview Card -->
+<div class="lg:col-span-6 flex flex-col items-center justify-center">
+<div class="relative w-full max-w-lg aspect-square rounded-2xl bg-[#0f0d16] border border-white/10 p-6 flex items-center justify-center shadow-2xl overflow-hidden">
+<!-- Dynamic Base Tint Floor Under Glow -->
+<div class="absolute bottom-6 w-3/4 h-28 rounded-full blur-2xl opacity-70 transition-colors duration-500 bg-primary/40" id="glow-ambient"></div>
+<!-- Warm 2700K Center Lamp Halo -->
+<div class="absolute w-44 h-44 bg-ambient-2700k/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Product visual -->
+<img alt="Configured 3D night lamp preview with stepped glowing shade" class="relative z-10 w-4/5 h-4/5 object-contain transition-all duration-300 filter drop-shadow-[0_0_30px_rgba(251,191,36,0.45)]" id="preview-img" src="https://lh3.googleusercontent.com/aida/AEtjO1XVdVj1ei3DYDhZ3bfCVgb7a7GYEnaKUbZnfBEER1R3HVEIONBlJMj9GWzpUlf7o-IbqPUjd2idWTGll2d4LgSiUqn7AhfmcoByUJUCCkIsM-eAVHX1pOkBfmVDtAPS8q9n6SkRo3u0-U1LNXP3ipbF_wy2XpDg__sNrpqt4umvZEnhfjTFesMyVZ5AfE0VRyd4xFtes8RnTUD7eE_k5RhhBidDmDm85RZsRc4am3smzrm7NApWWkaJftY"/>
+<!-- Floating Live Status -->
+<div class="absolute top-4 left-4 z-20 px-space-sm py-1 bg-surface-container-high/90 border border-white/10 backdrop-blur rounded-lg flex items-center gap-1.5 shadow-md">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="font-label-pixel-sm text-label-pixel-sm text-text-primary" id="selected-color-label">BASE: LAVENDER MIST</span>
+</div>
+<div class="absolute bottom-4 right-4 z-20 px-space-sm py-1 bg-surface-container-high/90 border border-white/10 backdrop-blur rounded-lg font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">
+              SHADE: WARM 2700K (LIT)
+            </div>
+</div>
+<p class="font-label-pixel-sm text-label-pixel-sm text-on-surface-variant mt-space-sm text-center">
+            *Stepped lamp shade remains warm white. Swatches apply to the base platform only.
+          </p>
+</div>
+<!-- Right Side: Interactive Configurator Controls -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 bg-primary-container/40 border border-primary/40 text-primary rounded font-label-pixel-sm text-label-pixel-sm shadow-[0_0_10px_rgba(221,184,255,0.2)]">
+              LIVE CONFIGURATOR
+            </span>
+<span class="text-secondary font-label-pixel-sm text-label-pixel-sm">IN STOCK • SHIPS TOMORROW</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">The Pixel Monolith (Gen 2)</h3>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-display-hero text-headline-lg text-primary font-extrabold drop-shadow-[0_0_15px_rgba(221,184,255,0.3)]">1,190,000₫</span>
+<span class="font-body-md text-body-md text-on-surface-variant">~$48.00 USD</span>
+</div>
+</div>
+<!-- Base Swatches Selection -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-ui text-label-ui text-text-primary font-bold">SELECT BASE HUE:</label>
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary font-bold" id="color-name-display">Lavender Mist</span>
+</div>
+<div class="grid grid-cols-6 gap-space-xs">
+<!-- Swatch 1: Lavender -->
+<button aria-label="Select Lavender Mist" class="swatch-btn h-12 rounded-xl bg-[#c4b5fd] flex items-center justify-center shadow-sm ring-2 ring-primary ring-offset-2 ring-offset-[#1c1a24] transition-all" onclick="setBaseColor('Lavender Mist', '#c4b5fd', 'bg-purple-500/50')" title="Lavender Mist"></button>
+<!-- Swatch 2: Pastel Pink -->
+<button aria-label="Select Pastel Pink" class="swatch-btn h-12 rounded-xl bg-[#f472b6] flex items-center justify-center shadow-sm hover:scale-105 transition-all ring-offset-2 ring-offset-[#1c1a24]" onclick="setBaseColor('Pastel Pink', '#f472b6', 'bg-pink-500/50')" title="Pastel Pink"></button>
+<!-- Swatch 3: Sky Blue -->
+<button aria-label="Select Sky Blue" class="swatch-btn h-12 rounded-xl bg-[#38bdf8] flex items-center justify-center shadow-sm hover:scale-105 transition-all ring-offset-2 ring-offset-[#1c1a24]" onclick="setBaseColor('Sky Blue', '#38bdf8', 'bg-sky-500/50')" title="Sky Blue"></button>
+<!-- Swatch 4: Mint Green -->
+<button aria-label="Select Mint Green" class="swatch-btn h-12 rounded-xl bg-[#34d399] flex items-center justify-center shadow-sm hover:scale-105 transition-all ring-offset-2 ring-offset-[#1c1a24]" onclick="setBaseColor('Mint Green', '#34d399', 'bg-emerald-500/50')" title="Mint Green"></button>
+<!-- Swatch 5: Butter Cream -->
+<button aria-label="Select Butter Cream" class="swatch-btn h-12 rounded-xl bg-[#fef08a] flex items-center justify-center shadow-sm hover:scale-105 transition-all ring-offset-2 ring-offset-[#1c1a24]" onclick="setBaseColor('Butter Cream', '#fef08a', 'bg-amber-400/50')" title="Butter Cream"></button>
+<!-- Swatch 6: Obsidian Charcoal -->
+<button aria-label="Select Obsidian Charcoal" class="swatch-btn h-12 rounded-xl bg-[#1e1b4b] border border-white/20 flex items-center justify-center shadow-sm hover:scale-105 transition-all ring-offset-2 ring-offset-[#1c1a24]" onclick="setBaseColor('Obsidian Charcoal', '#1e1b4b', 'bg-slate-700/60')" title="Obsidian Charcoal"></button>
+</div>
+</div>
+<!-- Strict Boundary Clarification Banner -->
+<div class="p-space-sm bg-[#14121b] border border-white/5 rounded-xl flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every lamp is crafted from 100% bio-PLA filament using high-precision FDM 3D printing. No custom text engravings or modified geometries are accepted to maintain strict lighting balance.
+            </p>
+</div>
+<!-- Quantity and Action Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between bg-[#14121b] border border-white/10 px-space-md py-3 rounded-xl shadow-sm sm:w-36">
+<button class="text-text-primary font-bold text-lg hover:text-primary transition-colors" onclick="adjustQty(-1)">-</button>
+<span class="font-label-pixel-lg text-label-pixel-lg text-text-primary" id="qty-val">1</span>
+<button class="text-text-primary font-bold text-lg hover:text-primary transition-colors" onclick="adjustQty(1)">+</button>
+</div>
+<button class="flex-1 py-3.5 bg-gradient-to-r from-primary to-primary-container text-[#14121b] rounded-xl font-headline-sm text-body-md font-bold shadow-[0_0_20px_rgba(221,184,255,0.35)] hover:shadow-[0_0_30px_rgba(221,184,255,0.5)] hover:brightness-110 transition-all flex items-center justify-center gap-space-xs" onclick="triggerCartToast()">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+<button class="px-space-md py-3.5 bg-secondary text-[#14121b] rounded-xl font-headline-sm text-body-md font-bold shadow-[0_0_20px_rgba(255,175,211,0.35)] hover:shadow-[0_0_30px_rgba(255,175,211,0.5)] hover:brightness-110 transition-all">
+              1-Click Buy
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. HOW IT WORKS (Simple 4-Step Process) -->
+<section class="w-full py-space-xl bg-[#0f0d16] border-y border-white/5" id="how-it-works">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Step-by-Step Experience ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">From Digital Slicing to Bedside Glow</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Simple ordering, zero guesswork. Pure tactile ambient joy.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-sm shadow-md hover:border-purple-500/30 transition-all relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-primary bg-surface-container-high border border-purple-500/30 px-space-xs py-1 rounded w-fit">01 / SILHOUETTE</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Choose a Lamp</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Select one of our four iconic voxel models designed specifically for smooth 2700K bed-friendly light refraction.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-sm shadow-md hover:border-pink-500/30 transition-all relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-secondary bg-secondary-container/60 border border-secondary/30 px-space-xs py-1 rounded w-fit">02 / COLORWAY</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Choose Base Color</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Match your mechanical keyboard, bed linen, or desk decor with our six hand-picked pastel and neutral filament hues.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-sm shadow-md hover:border-amber-500/30 transition-all relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-ambient-2700k bg-amber-500/10 border border-amber-500/30 px-space-xs py-1 rounded w-fit">03 / CHECKOUT</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Place Your Order</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Fast, secure checkout in under 30 seconds via MoMo, ZaloPay, domestic ATM cards, Apple Pay, or Cash-on-Delivery.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-sm shadow-md hover:border-purple-500/30 transition-all relative">
+<span class="font-label-pixel-lg text-label-pixel-lg text-primary bg-surface-container-high border border-purple-500/30 px-space-xs py-1 rounded w-fit">04 / DISPATCH</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">3D Print &amp; Deliver</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Precision additive manufactured in District 3, Saigon, securely packed in shock-proof honeycomb boxes, and shipped door-to-door.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. WHY GUDNITE (4 Core Benefits) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Why GUDNITE Saigon ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary leading-tight font-bold">
+          Where Artisanal Craft Meets Early-Digital Whimsy
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We reimagined bedtime table lighting. We rejected sterile mass-produced injection plastic to give you warm, tactile voxel objects created layer-by-layer in Vietnam.
+        </p>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 rounded-2xl flex items-center gap-space-md shadow-md">
+<div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/40 text-primary flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(221,184,255,0.25)]">
+<span class="material-symbols-outlined text-[24px]">eco</span>
+</div>
+<div>
+<span class="font-headline-sm text-body-md font-bold text-text-primary block">Zero Filament Scrap Waste</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Every run is sliced on-demand from renewable corn-starch PLA.</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-md bg-[#1c1a24] border border-white/5 hover:border-purple-500/20 rounded-2xl shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high border border-purple-500/30 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-text-primary">Unique Pixel Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Nostalgic 8-bit stepped geometry elevated with clean contemporary curves that soften the glow across surrounding surfaces.
+          </p>
+</div>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 hover:border-pink-500/20 rounded-2xl shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/60 border border-secondary/30 text-secondary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-text-primary">3D Print Technology</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Additive manufacturing ensures structural micro-layers that uniquely catch and scatter LED light for zero glare.
+          </p>
+</div>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 hover:border-amber-500/20 rounded-2xl shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 text-ambient-2700k flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-text-primary">Energy-Saving LED Core</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Warm 2700K circadian-friendly LEDs with 50,000+ hours lifespan, drawing merely 2.5W from any standard USB-C port.
+          </p>
+</div>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 hover:border-purple-500/20 rounded-2xl shadow-sm flex flex-col gap-space-xs transition-all">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high border border-purple-500/30 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-text-primary">Modular Base Colors</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Interchangeable stepped platform bases available in six curated shades that fit naturally into modern room aesthetics.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. 3D PRINTING PROCESS (Visual Production Timeline) -->
+<section class="w-full py-space-xl bg-[#0f0d16] border-y border-white/5">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Behind the Curtain ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">How We Build Every Single Pixel</h2>
+</div>
+<!-- Horizontal Timeline Tracker -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="p-space-md bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-xs shadow-md">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary">PHASE 01</span>
+<h4 class="font-headline-sm text-body-lg text-text-primary font-bold">CAD &amp; Slicing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Each lamp geometry is calculated at 0.16mm layer height with customized internal wall density to prevent LED hotspots.
+          </p>
+<div class="mt-2 text-primary font-label-pixel-sm text-[11px] bg-surface-container-high border border-purple-500/30 px-2 py-1 rounded w-fit">
+            TOLERANCE: ±0.05MM
+          </div>
+</div>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-xs shadow-md">
+<span class="font-label-pixel-sm text-label-pixel-sm text-secondary">PHASE 02</span>
+<h4 class="font-headline-sm text-body-lg text-text-primary font-bold">18-Hour Extrusion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Continuous temperature-controlled printing produces the velvety matte surface and signature stepped voxel silhouette.
+          </p>
+<div class="mt-2 text-secondary font-label-pixel-sm text-[11px] bg-secondary-container/60 border border-secondary/30 px-2 py-1 rounded w-fit">
+            TEMP: 215°C STEADY
+          </div>
+</div>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-xs shadow-md">
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">PHASE 03</span>
+<h4 class="font-headline-sm text-body-lg text-text-primary font-bold">Assembly &amp; QA</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Hand-wired with insulated 5V thermal heat pads, pure copper USB-C leads, and tested for 6 hours before authorization.
+          </p>
+<div class="mt-2 text-ambient-2700k font-label-pixel-sm text-[11px] bg-amber-500/20 border border-amber-500/40 px-2 py-1 rounded w-fit">
+            BURN-IN TEST: PASS
+          </div>
+</div>
+<div class="p-space-md bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col gap-space-xs shadow-md">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary">PHASE 04</span>
+<h4 class="font-headline-sm text-body-lg text-text-primary font-bold">Eco Packaging</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Suspended inside zero-plastic recyclable honeycomb kraft boxes, safe from transit bumps and ready for gifting.
+          </p>
+<div class="mt-2 text-primary font-label-pixel-sm text-[11px] bg-surface-container-high border border-purple-500/30 px-2 py-1 rounded w-fit">
+            ZERO STYROFOAM
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. LIFESTYLE SHOWCASE (Masonry Aesthetic Gallery) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ In Real Spaces ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">Curated Room Inklings</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+          Tag @Gudnite.Saigon on Instagram to have your nocturnal desk setup featured here.
+        </p>
+</div>
+<!-- Lifestyle Photo Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Setup 1: Bedside -->
+<div class="md:col-span-6 group relative rounded-3xl overflow-hidden aspect-[4/3] bg-surface-container border border-white/10 shadow-lg">
+<img alt="A warm cozy bedside table setting at dusk with the GUDNITE 3D-printed pixel lamp casting a gentle 2700K amber glow beside an open book, linen pillows in pastel lilac, and ceramic cup in a contemporary minimalist apartment in Saigon." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A warm cozy bedside table setting at dusk with the GUDNITE 3D-printed pixel lamp casting a gentle 2700K amber glow beside an open book, linen pillows in pastel lilac, and ceramic cup in a contemporary minimalist apartment in Saigon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrk9pXUbR3om3vGUs5WTKn1ZUU5oKDvgW4bKcAChJ1xIrf1JoUP45DGNa92MQOvwIDu3q0DiGnqnYJhJrGvZ3_WQ4bvykSsMO4ySWPKta56I-v3cjEbceXv8UcJGDYzV4G9wg0U7cy9HiV55DYdVxu09F06Pv-ynZhFnWdw-HhfWv5OQnayfsd8_wBP5Q5wBhlGcEqkGxyBVVBgr9xuoLrZtq6vaafNbERK6npDKNJb48fKXD02Xo9nA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f0d16]/90 via-[#0f0d16]/30 to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">NIGHTSTAND EDIT</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-text-primary">Cozy Bedroom Warmth</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Model: The Monolith in Lavender</span>
+</div>
+</div>
+<!-- Setup 2: Study Nook -->
+<div class="md:col-span-6 group relative rounded-3xl overflow-hidden aspect-[4/3] bg-surface-container border border-white/10 shadow-lg">
+<img alt="A clean Scandinavian study desk with natural birch wood desk organizer, a potted jade succulent plant, notebook with fountain pen, and the GUDNITE pixel bloom lamp illuminating the desktop in soft warm white." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean Scandinavian study desk with natural birch wood desk organizer, a potted jade succulent plant, notebook with fountain pen, and the GUDNITE pixel bloom lamp illuminating the desktop in soft warm white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwvoMKI5PYyzubpMmQfD4qPH5RjXYIAWQnWGm2hRQZUKXpRTbYJcQi-RvJzAeBIqcQblDoGlpn8lZDOHjr6rcVR88UdQgaEkxcDISHQWowyB19V9WKjBH-zl632YCkQDGStp0FCh9sblzN5EY-gwYru4RlOn6pI2eOflCr2r1ioXXcYUNpTfOlFSjLiqNl34QUMsYtNMI6TVVT_QqwTZtkOJLB3RU3J0E9qqeD25C0pN8vj0XnzJ1VQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f0d16]/90 via-[#0f0d16]/30 to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-secondary">STUDY NOOK</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-text-primary">Minimalist Reading Desk</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Model: Pixel Bloom in Pastel Pink</span>
+</div>
+</div>
+<!-- Setup 3: Cyber-Pastel Gaming -->
+<div class="md:col-span-4 group relative rounded-3xl overflow-hidden aspect-square bg-surface-container border border-white/10 shadow-lg">
+<img alt="A trendy Gen Z mechanical keyboard enthusiast desktop with custom pastel keycaps, coiled USB-C cable, oversized felt deskmat, and the GUDNITE stepped pixel lamp softly lit." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A trendy Gen Z mechanical keyboard enthusiast desktop with custom pastel keycaps, coiled USB-C cable, oversized felt deskmat, and the GUDNITE stepped pixel lamp softly lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdk0nRSXXGwv1vT3-imaPj4gLOtsrb3r5m3b9I80_9XZQ8ZIeMdM5rfcl3-XkZ5GsfnCcCTj9RPe5mgC96lINWCeBZdyVBwDI5ImrEg-O2t3C42FrdhYQzgCOMaApvrlAHovh2Notb_TefJRBCaQpT6tBlB7B5Tgj8S1t2K4U47OHYKH9vP1NJ_iH_HAsiJNOEyfAN6NlvHIMo8PByCf5r4XIn-8VAcj6Zvw7M6sJtd1dKAlhCeWpl3g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f0d16]/90 via-[#0f0d16]/30 to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary">GAMING STATION</span>
+<h4 class="font-headline-sm text-body-lg font-bold text-text-primary">Lo-Fi Mechanical Setup</h4>
+</div>
+</div>
+<!-- Setup 4: Ceramic studio desk -->
+<div class="md:col-span-8 group relative rounded-3xl overflow-hidden aspect-[2/1] bg-surface-container border border-white/10 shadow-lg">
+<img alt="A wide bright studio workbench with 3D printers in the blurred background, design sketchbooks, filament spools in mint green and lilac, and multiple GUDNITE pixel art lamps lined up in gentle ambient light." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide bright studio workbench with 3D printers in the blurred background, design sketchbooks, filament spools in mint green and lilac, and multiple GUDNITE pixel art lamps lined up in gentle ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt-QTpsU3BQQrKi0Jcv_pOMApcEJPJSUALCHwadSB4HtHLGIOa-QU0clxFlrsWwdwNFHr0EnYGjuoiETyQBc-iqcnRIkTRvLiMHw_rQAxkgRmW_M3wcg9hoeMUwiLxcM7-G8st-us6-GUaO_x_LiKuW6TiZYh0bTsf9bsQBSTchaw1U3fakvMb6SOIquucjTqMtS7mK-GHtnAyGAHOJzL3Wu_duVZO2n53TZ8tzfK8ebpJIZmH_6m--Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0f0d16]/90 via-[#0f0d16]/30 to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-pixel-sm text-label-pixel-sm text-ambient-2700k">SAIGON ATELIER</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-text-primary">Where Pixels Become Reality</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">District 3 Creative Workshop</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CUSTOMER REVIEWS -->
+<section class="w-full py-space-xl bg-[#0f0d16] border-y border-white/5">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="text-center max-w-xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Community Feedback ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">Loved by Desk Enthusiasts</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Review 1 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="text-ambient-2700k text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-text-primary italic">
+              "The soft warm glow is incredible for my bedside table. Love how the lavender base matches my custom mechanical keyboard setup perfectly!"
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container/40 border border-primary/30 text-primary font-headline-sm text-body-sm flex items-center justify-center font-bold">LN</div>
+<div>
+<span class="font-label-ui text-label-ui text-text-primary font-bold block">Linh Nguyen</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant">Hanoi • Verified (The Monolith)</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="text-ambient-2700k text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-text-primary italic">
+              "The 3D printed texture feels so unique in hands. You can see the micro-layer precision. True voxel art came to life in my room."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container/60 border border-secondary/30 text-secondary font-headline-sm text-body-sm flex items-center justify-center font-bold">MT</div>
+<div>
+<span class="font-label-ui text-label-ui text-text-primary font-bold block">Minh Tran</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant">Saigon • Verified (Pixel Bloom)</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg bg-[#1c1a24] border border-white/5 rounded-2xl flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="text-ambient-2700k text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-text-primary italic">
+              "Packaged like a gallery artwork. Zero styrofoam and super easy USB-C plug. 10/10 recommend for anyone into aesthetic bedroom setups."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/40 text-ambient-2700k font-headline-sm text-body-sm flex items-center justify-center font-bold">AV</div>
+<div>
+<span class="font-label-ui text-label-ui text-text-primary font-bold block">Anh Vo</span>
+<span class="font-label-pixel-sm text-[11px] text-on-surface-variant">Da Nang • Verified (Skyline Tower)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. FAQ SECTION (Accordion with 7 Key Questions) -->
+<section class="w-full py-space-xl bg-surface" id="faq">
+<div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="text-center flex flex-col gap-space-xs">
+<span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">[ Answers &amp; Specs ]</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-text-primary font-bold">Frequently Asked Questions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Everything you need to know about our materials, craft, and care.</p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Q1 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>What materials are used to make GUDNITE lamps?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            All GUDNITE lamps are additive-manufactured using high-grade, bio-based PLA (Poly-Lactic Acid) derived from renewable fermented plant starch. It is completely odorless, non-toxic, and safe around children and pets.
+          </p>
+</details>
+<!-- Q2 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>What base color options are available?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            You can pair any of our 4 signature silhouettes with 6 curated base colorways: Lavender Mist, Pastel Pink, Sky Blue, Mint Green, Butter Cream, and Obsidian Charcoal. The upper stepped pixel shade remains glowing warm white.
+          </p>
+</details>
+<!-- Q3 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>How fast is production and delivery?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Because we operate our own 3D print laboratory in Saigon, orders ship out within 24–48 hours. Express domestic delivery in Vietnam takes 1–3 business days. Regional Southeast Asia shipping takes 4–7 days.
+          </p>
+</details>
+<!-- Q4 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>Does the lamp get warm or pose fire risks?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            No. The internal LED module runs on low-voltage 5V DC consuming merely 2.5W. Even when left on continuously overnight, the outer surface remains completely cool to the touch.
+          </p>
+</details>
+<!-- Q5 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>How is the lamp powered?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Each unit comes with a durable 1.5m braided USB-C cable with an integrated in-line power switch. You can plug it into any phone wall charger, laptop, or portable power bank for cord-free desk placement.
+          </p>
+</details>
+<!-- Q6 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>What warranty policy is included?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Every GUDNITE lamp includes a comprehensive 12-month direct replacement warranty covering all LED modules and electrical components. If anything fails, we replace it free of charge.
+          </p>
+</details>
+<!-- Q7 -->
+<details class="group bg-[#1c1a24] border border-white/5 rounded-2xl p-space-md [&amp;_summary::-webkit-details-marker]:hidden transition-colors hover:border-purple-500/20">
+<summary class="flex items-center justify-between cursor-pointer font-headline-sm text-body-lg text-text-primary font-bold">
+<span>Can I customize text engravings or shapes?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            To preserve the optical diffusion balance and industrial 3D print perfection, we do not accept custom text engravings or bespoke shape alterations. Customers choose between our 4 silhouettes and 6 base hues.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- 10. FINAL CALL TO ACTION -->
+<section class="w-full py-space-xl bg-[#0f0d16] border-t border-white/5">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="relative rounded-3xl p-space-xl lg:p-20 overflow-hidden bg-gradient-to-br from-[#262332] via-[#1c1a24] to-[#14121b] border border-purple-500/30 text-center text-text-primary shadow-[0_0_60px_rgba(221,184,255,0.15)] flex flex-col items-center justify-center gap-space-md">
+<!-- Decorative Ambient Pixel Shapes & Glowing Halos -->
+<div class="absolute -top-10 -left-10 w-60 h-60 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-6 right-12 text-ambient-2700k text-2xl animate-spin pointer-events-none drop-shadow-[0_0_8px_#FBBF24]">✦</div>
+<div class="absolute bottom-8 left-12 text-primary text-xl pointer-events-none drop-shadow-[0_0_8px_#ddb8ff]">★</div>
+<span class="font-label-pixel-sm text-label-pixel-sm bg-surface-container-high/70 border border-white/10 backdrop-blur px-space-sm py-1 rounded-full text-primary">
+          MADE IN SAIGON • READY TO SHIP
+        </span>
+<h2 class="font-display-hero text-headline-lg-mobile lg:text-display-hero font-extrabold max-w-2xl leading-tight text-transparent bg-clip-text bg-gradient-to-r from-text-primary via-primary to-secondary">
+          Find the Perfect Glow for Your Space.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+          Choose your favorite lamp silhouette and match it with the perfect base color today.
+        </p>
+<a class="mt-space-xs px-space-xl py-4 bg-gradient-to-r from-ambient-2700k to-amber-500 text-[#14121b] rounded-xl font-headline-sm text-body-lg font-bold shadow-[0_0_25px_rgba(251,191,36,0.4)] hover:shadow-[0_0_35px_rgba(251,191,36,0.6)] hover:brightness-110 transition-all flex items-center gap-space-xs" href="#studio">
+<span>Shop GUDNITE Lamps</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-pixel-sm text-label-pixel-sm mt-space-sm">
+<span class="text-primary">⚡ 5V Low Power</span>
+<span>•</span>
+<span class="text-emerald-400">🌱 100% Eco PLA</span>
+<span>•</span>
+<span class="text-secondary">🛡️ 1-Year Warranty</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Configurator Script -->
+<script>
+    let currentQty = 1;
+
+    function setBaseColor(name, hexColor, bgClass) {
+      const displayLabel = document.getElementById('color-name-display');
+      const pillLabel = document.getElementById('selected-color-label');
+      const ambientGlow = document.getElementById('glow-ambient');
+
+      if (displayLabel) displayLabel.innerText = name;
+      if (pillLabel) pillLabel.innerText = `BASE: ${name.toUpperCase()}`;
+      
+      // Update ambient glow color
+      if (ambientGlow) {
+        ambientGlow.className = `absolute bottom-6 w-3/4 h-28 rounded-full blur-2xl opacity-70 transition-colors duration-500 ${bgClass}`;
+      }
+
+      // Update ring focus on swatches
+      const buttons = document.querySelectorAll('.swatch-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('title') === name) {
+          btn.classList.add('ring-2', 'ring-primary', 'ring-offset-2');
+        } else {
+          btn.classList.remove('ring-2', 'ring-primary', 'ring-offset-2');
+        }
+      });
+    }
+
+    function adjustQty(amount) {
+      currentQty = Math.max(1, currentQty + amount);
+      const qtyElem = document.getElementById('qty-val');
+      if (qtyElem) qtyElem.innerText = currentQty;
+    }
+
+    function triggerCartToast() {
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Added to Cart!</span>';
+      btn.classList.replace('from-primary', 'from-emerald-500');
+      btn.classList.replace('to-primary-container', 'to-emerald-600');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.replace('from-emerald-500', 'from-primary');
+        btn.classList.replace('to-emerald-600', 'to-primary-container');
+      }, 2000);
+    }
+  </script>
+</div></main><footer class="w-full bg-[#0f0d16] border-t border-white/5 text-on-surface pt-space-xl pb-margin"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-text-primary font-extrabold tracking-tight">GUDNITE</span><span class="font-label-pixel-sm text-label-pixel-sm px-space-xs py-0.5 bg-amber-500/20 border border-amber-500/40 text-ambient-2700k rounded">EST. 2025</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Light up your space, pixel by pixel. Crafted in Saigon with precision 3D printing, eco-conscious PLA, and cozy ambient warmth.</p><div class="flex flex-col gap-space-xs"><span class="font-label-pixel-sm text-label-pixel-sm text-primary uppercase">// Newsletter Desk Lamp Dispatch</span><form class="flex items-center gap-space-xs max-w-md"><input class="flex-1 bg-[#1c1a24] border border-white/10 px-space-md py-2.5 rounded-xl font-body-sm text-body-sm text-text-primary placeholder:text-outline outline-none focus:border-purple-500/50 focus:shadow-[0_0_12px_rgba(221,184,255,0.2)]" placeholder="Enter your email..." type="email"/><button class="px-space-md py-2.5 bg-primary text-[#14121b] font-bold rounded-xl font-label-pixel-lg text-label-pixel-lg hover:brightness-110 shadow-[0_0_12px_rgba(221,184,255,0.3)] transition-all flex items-center justify-center gap-space-xs" type="submit"><span class="material-symbols-outlined text-[18px]">send</span></button></form></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-pixel-lg text-label-pixel-lg text-primary uppercase">[ Shop Models ]</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="shop" href="#">The Monolith</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="shop" href="#">Pixel Bloom</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="shop" href="#">Sky Tower</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="shop" href="#">Cube Glow</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="collections" href="#">Limited Drops</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-pixel-lg text-label-pixel-lg text-primary uppercase">[ About &amp; Craft ]</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">Our 3D Print Lab</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">Sustainability PLA</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">How It Works</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">Studio Saigon</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">Custom Commissions</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-pixel-lg text-label-pixel-lg text-primary uppercase">[ Customer Care ]</span><div class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="order-tracking" href="#">Order Tracking</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="shipping-policy" href="#">Shipping (VN &amp; Global)</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="faq" href="#">FAQ</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="returns-warranty" href="#">Returns &amp; Warranty</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact Support</a></div></div></div><div class="pt-space-lg border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-xs"><span class="font-label-pixel-sm text-label-pixel-sm text-on-surface-variant mr-space-xs">PAY SECURELY:</span><span class="px-space-xs py-1 bg-[#1c1a24] border border-white/5 rounded font-label-pixel-sm text-label-pixel-sm text-secondary font-bold">MoMo</span><span class="px-space-xs py-1 bg-[#1c1a24] border border-white/5 rounded font-label-pixel-sm text-label-pixel-sm text-primary font-bold">ZaloPay</span><span class="px-space-xs py-1 bg-[#1c1a24] border border-white/5 rounded font-label-pixel-sm text-label-pixel-sm text-text-primary font-bold">Visa / MC</span><span class="px-space-xs py-1 bg-[#1c1a24] border border-white/5 rounded font-label-pixel-sm text-label-pixel-sm text-text-primary font-bold">Apple Pay</span><span class="px-space-xs py-1 bg-[#1c1a24] border border-white/5 rounded font-label-pixel-sm text-label-pixel-sm text-ambient-2700k font-bold">COD (VN)</span></div><p class="font-label-pixel-sm text-label-pixel-sm text-on-surface-variant text-center md:text-right">© 2025 GUDNITE Co., Ltd. All rights reserved. Made for cozy spaces.</p></div></div></footer></body></html>
